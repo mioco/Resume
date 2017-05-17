@@ -1,0 +1,47 @@
+.resume-container {
+  width: 800px;
+  min-height: calc(800px * 297 / 210);
+  box-sizing: border-box;
+  background-color: #fff;
+  margin: 0 auto; }
+  .resume-container > div {
+    padding: 0 2rem; }
+  .resume-container .resume-info {
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem; }
+  .resume-container .resume-infoChunk {
+    margin-top: 1.5rem; }
+    .resume-container .resume-infoChunk .resume-infoChunk-title {
+      margin-bottom: 1rem; }
+      .resume-container .resume-infoChunk .resume-infoChunk-title hr {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin-bottom: -0.75rem; }
+      .resume-container .resume-infoChunk .resume-infoChunk-title h2 {
+        display: inline-block;
+        padding-right: 1.5rem;
+        font-size: 1.1rem;
+        background-color: #fff; }
+    .resume-container .resume-infoChunk .resume-infoChunk-body {
+      margin-left: 0.55rem;
+      border-left: 1px solid #ddd;
+      padding: .5rem 1rem; }
+      .resume-container .resume-infoChunk .resume-infoChunk-body span:first-child {
+        width: 5.5rem;
+        display: inline-block; }
+  .resume-container .resume-info div:not(.clear) {
+    float: left;
+    width: 50%; }
+  .resume-container .resume-info h1 {
+    margin-top: 2rem; }
+  .resume-container .resume-info a {
+    color: #fff; }
+  .resume-container .resume-exp-item {
+    margin-bottom: 1.5rem; }
+    .resume-container .resume-exp-item-title h3 {
+      float: left; }
+    .resume-container .resume-exp-item-title span {
+      float: right; }
+    .resume-container .resume-exp-item p {
+      text-align: justify; }

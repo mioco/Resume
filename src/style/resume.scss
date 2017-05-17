@@ -1,0 +1,68 @@
+$p: resume-;
+
+.#{$p}container {
+  width: 800px;
+  min-height: calc(800px * 297 / 210);
+  box-sizing: border-box;
+  background-color: #fff;
+  margin: 0 auto;
+  $chunk: resume-infoChunk;
+
+  &>div {
+    padding: 0 2rem;
+  }
+  .#{$p}info {
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+  }
+  .#{$chunk} {
+    margin-top: 1.5rem;
+    .#{$chunk}-title {
+      margin-bottom: 1rem;      
+      hr {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin-bottom: -0.75rem;
+      }
+      h2 { 
+        display: inline-block;
+        padding-right: 1.5rem;
+        font-size: 1.1rem;
+        background-color: #fff;
+      }
+    }
+
+    .#{$chunk}-body {
+      margin-left: 0.55rem;
+      border-left: 1px solid #ddd;
+      padding: .5rem 1rem;
+      span:first-child {
+        width: 5.5rem;
+        display: inline-block;
+      }
+    }
+  }
+
+  .#{$p}info {
+    div:not(.clear) {
+      float: left;
+      width: 50%;
+    }
+    h1 {margin-top: 2rem;}
+    a {color: #fff;}
+  }
+  
+  .#{$p}exp {
+    &-item {
+      margin-bottom: 1.5rem;
+      &-title {
+        h3 { float: left;}
+        span {
+          float: right;
+        }
+      }
+      p { text-align: justify;}
+    }
+  }
+}

@@ -1,0 +1,63 @@
+
+html, body, #app {
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #ddd;
+  line-height: 1.5;
+  color: rgba(0,0,0,.7);
+  font-size: 15px;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+p {
+  margin: .2rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(0,0,0,.7);
+}
+.clear {
+  clear: both !important;
+}
+
+.iconfont {
+  vertical-align: middle;
+}
+
+#app>div>div.resume-side {
+  position: fixed;
+  width: calc((100vw - 800px) / 2 - 1rem);
+  top: 0;
+  &.resume-editor {
+    left: 0;
+  }
+  &.resume-navBtn {
+    right: 0;
+    padding-top: 35vh;
+    div {
+      display: table;
+      background-color: #b1b1b1;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      text-align: center;
+      margin-bottom: 2rem;
+      margin-left: 5rem;
+      i {
+        font-size: 2rem;
+        display: table-cell;
+      }
+    }
+  }
+}
+
+//==============
+//btn
+//==============
