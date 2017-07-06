@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
-  font-family: '兰亭';
-  src: url("/方正兰亭细_GBK.TTF"); }
+  font-family: '方正兰亭纤黑';
+  src: url("/方正兰亭纤黑.ttf"); }
 
 html, body, #app {
   width: 100%;
@@ -15,7 +15,8 @@ body {
 
 h1, h2, h3 {
   margin: 0;
-  font-weight: lighter; }
+  font-weight: lighter;
+  font-family: '方正兰亭纤黑'; }
 
 p {
   margin: .2rem 0; }

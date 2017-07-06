@@ -4,17 +4,17 @@
 	display: block;
   width: 800px;
   box-sizing: border-box;
-  height: 4rem;
-  background: #abc;
+  height: 5rem;
   border-radius: 0.5rem;
   margin: 2rem auto;
   text-align: center;
-  line-height: 2;
+  line-height: calc(5/1.5);
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  text-shadow: rgba(0, 0, 0, 0.2533333333) 0 1px 1px;
 }
 
 #app .downloadBtn.styl-material {
