@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Footer from './Footer';
 import '../style/resume.css';
 
 
@@ -21,8 +20,7 @@ class Resume extends Component {
       <div className="resume-container" ref="resumeContainer">
         <Info />
         { infoChunk }
-        <Experience exp={ this.props.state.exp }/>        
-        <Footer />
+        <Experience exp={ this.props.state.exp }/>
       </div>
     )
   }

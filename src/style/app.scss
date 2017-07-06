@@ -42,8 +42,8 @@ a {
   &.resume-navBtn {
     div a{
       display: block;
-      background-color: #abc;
-      color: #abc;
+      background-color: #2196F3;
+      color: #2196F3;
       width: 6rem;
       height: 3rem;
       text-align: center;
@@ -76,5 +76,5 @@ a {
 }
 
 @media print {
-  #app #downloadBtn { display: none;}
+  #app #downloadPDF { display: none;}
 }

@@ -4,6 +4,7 @@ class Footer extends Component {
   render() {
     return(
       <div className="resume-footer">
+        <small>2017@osyo</small>
       </div>
     )
   }

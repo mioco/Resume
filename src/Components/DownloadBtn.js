@@ -34,7 +34,7 @@ class DownloadBtn extends Component {
   }
   render() {
     return(
-      <div>
+      <div id="downloadPDF">
         <div style={{height: 0, width: 0, position: 'absolute', visibility: 'hidden'}} aria-hidden="true">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" focusable="false">
             <symbol id="ripply-scott" viewBox="0 0 100 100">
@@ -42,7 +42,7 @@ class DownloadBtn extends Component {
             </symbol>
           </svg>
         </div>
-        <a href="/osyo_resume.pdf" target="_blank" className="downloadBtn styl-material" onMouseOver={this.create_wave.bind(this)}>
+        <a href="./osyoResume.pdf" target="_blank" className="downloadBtn styl-material" onMouseOver={this.create_wave.bind(this)}>
           Download PDF
           <svg className="ripple-obj" id="js-ripple">
             <use height="100" width="100" xlinkHref="#ripply-scott" ref="jsRipple"></use>
