@@ -4,11 +4,13 @@ import '../style/resume.css';
 
 
 class Resume extends Component {
-  // componentDidMount() {
-  //   let dom = this.refs.resumeContainer;
-  //   let height = document.body.clientHeight;
-  //   dom.style.width = height * 210 / 297 + 'px';
-  // }
+  componentDidMount() {
+    Array.from(this.refs.resumeContainer.children).forEach((ele, index) => {
+      setTimeout(() => {
+        ele.classList.add('played')
+      }, 150 * index);
+    })
+  }
   render() {
     let infoChunk = [];
     let key = 1;
@@ -29,13 +31,13 @@ class Resume extends Component {
 let Info = () => (
   <div className="resume-info">
     <div>
-      <h1>黄诗雨</h1>
-    </div>
-    <div>
       <p><i className="iconfont icon-email"></i> : mioco1997@gmail.com</p>
       <p><i className="iconfont icon-qq"></i> : 819705364</p>
       <p><i className="iconfont icon-20140914071624460easyiconnet48"></i> : 17768101090</p>
       <p><i className="iconfont icon-github"></i> : <a href="https://github.com/mioco">https://github.com/mioco</a></p>
+    </div>
+    <div>
+      <h1>黄诗雨</h1>
     </div>
     <div className="clear"></div>
   </div>
@@ -47,16 +49,15 @@ let List = ({className, icon, title, content}) => {
   content.forEach((c) => {
     pList.push(
       <div key={ key++ }>
-        <span>{ Object.keys(c) }</span>: 
-        &nbsp;<span>{Object.values(c)}</span>
+        <span dangerouslySetInnerHTML={{ __html: Object.values(c) }}></span>
       </div>
     );
   })
   return(
     <div className={ 'resume-infoChunk resume-' + className }>
-      <div className='resume-infoChunk-title'>      
+      <div className='resume-infoChunk-title'>
+        <h2>{ title }</h2>
         <hr/>
-        <h2><i className={"iconfont " + icon }></i>&nbsp;{ title }</h2>
       </div>
       <div className='resume-infoChunk-body'>
         { pList }
@@ -73,9 +74,9 @@ let Experience = (exp) => {
   })
   return(
     <div className="resume-infoChunk resume-exp">
-      <div className='resume-infoChunk-title'>        
+      <div className='resume-infoChunk-title'>
+        <h2>项目经历</h2>
         <hr/>
-        <h2><i className="iconfont icon-gongzuojingli"></i>&nbsp;项目经历</h2>
       </div>
       { expList }
     </div>

@@ -1,56 +1,64 @@
 $p: resume-;
-
+$main-color: #2196F3;
 .#{$p}container {
-  width: 800px;
-  min-height: calc(800px * 297 / 210);
+  max-width: 800px;
   box-sizing: border-box;
   background-color: #fff;
   margin: 0 auto;
   $chunk: resume-infoChunk;
-
   &>div {
-    padding: 0 2rem;
+    transition: all 500ms ease-out;
+    transform: translateY(2.5rem);
+    opacity: 0;
   }
-  .#{$p}info {
-    background: #333;
-    color: #fff;
-    padding: 1rem 2rem;
+  &>div.played{
+    transform: none;
+    opacity: 1;
   }
   .#{$chunk} {
     margin-top: 1.5rem;
+    light {
+      font-weight: 600;
+    }
     .#{$chunk}-title {
       margin-bottom: 1rem;      
       hr {
         border: none;
         border-top: 1px solid #ddd;
-        margin-bottom: -0.75rem;
       }
       h2 { 
         display: inline-block;
         padding-right: 1.5rem;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         background-color: #fff;
+        color: $main-color;
       }
     }
 
     .#{$chunk}-body {
-      margin-left: 0.55rem;
-      border-left: 1px solid #ddd;
-      padding: .5rem 1rem;
-      span:first-child {
-        width: 5.5rem;
-        display: inline-block;
+      div {
+        margin-top: .5rem;
+      }
+      h3 {
+        margin: 0.5rem 0 .5rem 0;
+      }
+      h3:after {
+        content: ' ';
+        border-bottom: 1px solid #ddd;
+        width: 2.5em;
+        display: block;
       }
     }
   }
 
   .#{$p}info {
-    div:not(.clear) {
+    div:first-child {
       float: left;
-      width: 50%;
+    }
+    div:nth-child(2) {
+      float: right;
     }
     h1 {margin-top: 2rem;}
-    a {color: #fff;}
   }
   
   .#{$p}exp {
@@ -62,7 +70,21 @@ $p: resume-;
           float: right;
         }
       }
-      p { text-align: justify;}
+      p { 
+        h4 { margin: 0;}
+      }
     }
+  }
+}
+
+/* -------------------------------------- */
+
+@media (max-width: 768px){
+  .#{$p}container{
+    width: 100vw;
+  }
+  .resume-container > div {
+    padding-left: 1rem;
+    padding-right: 2rem;
   }
 }
