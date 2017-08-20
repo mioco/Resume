@@ -11,16 +11,15 @@ class Resume extends Component {
     })
   }
   render() {
-    let infoChunk = [];
-    let key = 1;
-    this.props.state.info.forEach((i) => {
-      infoChunk.push(<List key={ key++ } className={ i.className } icon={ i.icon } title={ i.title } content={ i.content }/>);
+    let infoChunk = this.props.state.info.map((i, index) => {
+      return <List key={ index } className={ i.className } icon={ i.icon } title={ i.title } content={ i.content }/>;
     })
     return(
       <div className="resume-container" ref="resumeContainer">
         <Info />
         { infoChunk }
-        <Experience exp={ this.props.state.exp }/>
+        <Experience exp={ this.props.state.work } title="实习经历"/>
+        <Experience exp={ this.props.state.exp } title="项目经历"/>
       </div>
     )
   }
@@ -42,11 +41,9 @@ let Info = () => (
 )
 
 let List = ({className, icon, title, content}) => {
-  let pList = [];
-  let key = 1;
-  content.forEach((c) => {
-    pList.push(
-      <div key={ key++ }>
+  let pList = content.map((c, index) => {
+    return (
+      <div key={ index }>
         <span dangerouslySetInnerHTML={{ __html: Object.values(c) }}></span>
       </div>
     );
@@ -64,16 +61,14 @@ let List = ({className, icon, title, content}) => {
   )
 }
 
-let Experience = (exp) => {
-  let expList = [];
-  let key = 1;
-  exp.exp.forEach((i) => {
-    expList.push(<ExpChunk key={key++} title={ i.title } content={ i.content } toUrl={ i.url } time={ i.time }/>)
+let Experience = ({exp, title}) => {
+  let expList = exp.map((i, index) => {
+    return <ExpChunk key={index} title={ i.title } content={ i.content } toUrl={ i.url } time={ i.time }/>
   })
   return(
     <div className="resume-infoChunk resume-exp">
       <div className='resume-infoChunk-title'>
-        <h2>项目经历</h2>
+        <h2>{ title }</h2>
         <hr/>
       </div>
       { expList }

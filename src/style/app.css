@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: '方正兰亭纤黑';
-  src: url("/方正兰亭纤黑.ttf"); }
+  src: url("/fangzheng.ttf"); }
 
 html, body, #app {
   width: 100%;
@@ -36,23 +36,21 @@ a {
   position: fixed;
   right: 0;
   top: calc(50vh - 4rem); }
-
-#app > div > div.resume-side.resume-navBtn div a {
-  display: block;
-  background-color: #2196F3;
-  color: #2196F3;
-  width: 6rem;
-  height: 3rem;
-  text-align: center;
-  line-height: 3;
-  transition: .2s linear;
-  transform: translateX(5.2rem); }
-
-#app > div > div.resume-side.resume-navBtn div a:hover {
-  transform: translateX(0);
-  height: 2.5rem;
-  line-height: 2.5;
-  color: #fff; }
+  #app > div > div.resume-side.resume-navBtn div a {
+    display: block;
+    background-color: #2196F3;
+    color: #2196F3;
+    width: 6rem;
+    height: 3rem;
+    text-align: center;
+    line-height: 3;
+    transition: .2s linear;
+    transform: translateX(5.2rem); }
+  #app > div > div.resume-side.resume-navBtn div a:hover {
+    transform: translateX(0);
+    height: 2.5rem;
+    line-height: 2.5;
+    color: #fff; }
 
 @media (max-width: 768px) {
   #app #downloadBtn {
