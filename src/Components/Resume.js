@@ -29,9 +29,9 @@ let Info = () => (
   <div className="resume-info">
     <div>
       <p><i className="iconfont icon-email"></i> : mioco1997@gmail.com</p>
-      <p><i className="iconfont icon-qq"></i> : 819705364</p>
-      <p><i className="iconfont icon-20140914071624460easyiconnet48"></i> : 17768101090</p>
+      <p><i className="iconfont icon-20140914071624460easyiconnet48"></i> : 17621752019</p>
       <p><i className="iconfont icon-github"></i> : <a href="https://github.com/mioco">https://github.com/mioco</a></p>
+      <p><i className="iconfont icon-mycenter"></i> : <a href="https://osyox.com">https://osyox.com</a></p>
     </div>
     <div>
       <h1>黄诗雨</h1>
@@ -44,6 +44,7 @@ let List = ({className, icon, title, content}) => {
   let pList = content.map((c, index) => {
     return (
       <div key={ index }>
+        <span>{Object.keys(c)}</span> : 
         <span dangerouslySetInnerHTML={{ __html: Object.values(c) }}></span>
       </div>
     );

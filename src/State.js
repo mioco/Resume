@@ -5,9 +5,9 @@ const data = {
       icon: 'icon-mycenter',
       title: '个人信息',
       content: [
-        {'求职意向':'求职意向：前端工程师'},
-        {'教育经历':'教育经历：南京邮电大学/测绘工程/2018'},
-        {'': '社团经历：2015 - 校科协网络部副部长'}
+        {'求职意向':'Web前端工程师'},
+        {'教育经历':'南京邮电大学/测绘工程/2018'},
+        {'社团经历': '2015 - 校科协网络部副部长'}
 
       ]
     },
@@ -16,18 +16,13 @@ const data = {
       icon: 'icon-liebiao',
       title: '技能列表',
       content: [
-        {'前端': '<h3>前端</h3>'},
-        {'HTML/CSS': '□ 能编写语义化的HTML，模块化的CSS。熟悉HTLM5新增API及其特性。能够使用CSS实现常用布局和动画，不借助框架实现响应式页面'},
-        {'Javascript': '□ 能够在项目中熟练使用ES6，有面对对象开发习惯，熟悉JS异步编程，掌握常用异步解决方案。使用过ejs/jade等前端模板'},
-        {'前端框架': '□ 有React/Vue/小程序开发经验，对React Native/Weex/PWA保持关注，熟悉jQuery/Bootstrap等常见框架类库的使用，了解three.js'},
-        {'前端工具': '□ 使用Gulp/Webpack等构建工具'},
-        {'后端': '<h3>后端</h3>'},
-        {'后端框架':'□ 使用ThinkPHP/Express/Koa进行前端Mock请求和响应以及简单数据库操作，配合MySQL/MongoDB开发简单CURD应用'},
-        {'其他知识': '□ 熟悉HTTP常见知识，对HTTP/WebSocket有所了解。了解Apache/Nginx基本配置，实现反向代理等功能'},
-        {'其他': '<h3>其他</h3>'},
-        {'': '□ 了解排序/字符串查询等常见算法原理，了解基本数据结构'},
-        {'C#': '□ 有WPF开发经验，熟悉C#基本语法，遵循面向对象开发思想'},
-        {'多媒体': '□ 能够利用After Effects制作MG动画设计想要的交互效果，C4D建模'}
+        {'Vue/Vuex/Vue-router/Element': 'eleme实习期间主要任务是基于vue套餐开发群分平台应用'},
+        {'React/Express/Socket.io/Webpack': '下方有相关项目描述'},
+        {'Python': '主要用来做题'},
+        {'C#': '主要用来做WPF应用'},
+        {'Three.js': '<a href="https://www.osyox.com">个站主页</a>'},
+        {'ThinkPHP/JQuery/Bootstrap/Docker': ''},
+        {'ES2015+/chrome extension API': '<a href="https://github.com/mioco/chrome-extension-for-bilibili/blob/master/src/javascript/bilibiliPlugin.js">bilibili 的 chrome 扩展</a>'},
       ]
     }    
   ],
@@ -60,9 +55,10 @@ const data = {
   work: [
     {
       title: '饿了么',
-      time: '2017-07',
-      content: `<h4>Web前端实习生</h4>
-      参与eleme m站开发`
+      time: '2017-07 ~ 至今',
+      content: `<h4>用户交易研发部 / 移动平台组 / Web前端实习生</h4>
+      我们负责移动端Web的eleme应用开发，我参与其中的h5应用组件开发及负责用户群分平台的搭建。
+      `
     },
   ]
 }
